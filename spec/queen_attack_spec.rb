@@ -9,4 +9,15 @@ describe('#queen_attack?') do
   it("returns true if the coordinates are horizontally in line with each other") do
     expect([4,1].queen_attack?([6,1])).to(eq(true))
   end
+
+  it("returns true if the coordinates are vertically in line with each other") do
+    expect([4,1].queen_attack?([4,6])).to(eq(true))
+  end
+
+  it("returns true if the coordinates are diagonally in line with each other") do
+    expect([2,2].queen_attack?([3,1])).to(eq(true))
+    expect([2,2].queen_attack?([1,1])).to(eq(true))
+    expect([2,2].queen_attack?([3,3])).to(eq(true))
+    expect([2,2].queen_attack?([1,3])).to(eq(true))
+  end
 end
