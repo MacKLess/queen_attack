@@ -15,33 +15,24 @@ _Ruby application that determines valid attacks for a queen at a given position 
 
 ## Specifications
 
-* _Returns a string as is when no Leetspeak rules apply_
-  * Example input: jumpy
-  * Example output: jumpy
-* _Replaces every "e" or "E" in a string with a "3"_
-  * Example input: keep
-  * Example output: k33p
-* _Replaces every "o" or "O" in a string with a "0"_
-  * Example input: boo boo
-  * Example output: b00 b00
-* _Replaces every "I" in a string with a "1"_
-  * Example input: I like Ike
-  * Example output: 1 lik3 1k3
-* _Replaces every "t" or "T" in a string with a "7"_
-  * Example input: teeth
-  * Example output: 7337h
-* _Replaces every "a" or "A" in a string with a "4"_
-  * Example input: happy
-  * Example output: h4ppy
-* _Replaces every "s" or "S" in a string with a "z"_
-  * Example input: roses
-  * Example output: r0z3z
-* _Does not replace first letter when it is an "s"_
-  * Example input: sassafrass
-  * Example output: s4zz4fr4zz
-* _Replaces letters correctly in a string of words_
-  * Example input: I scream you scream we all scream for raspberry ice cream.
-  * Example output: 1 scr34m y0u scr34m w3 4ll scr34m f0r r4zpb3rry ic3 cr34m
+* _Returns false if the coordinates are not horizontally, vertically, or diagonally in line with each other._
+  * Example input: [1,1], [2,3]
+  * Example output: false
+* _Returns true if the coordinates are horizontally in line with each other_
+  * Example input: [4,1], [6,1]
+  * Example output: true
+* _Returns true if the coordinates are vertically in line with each other_
+  * Example input: [4,1], [4,6]
+  * Example output: true
+* _Returns true if the coordinates are diagonally in line with each other_
+  * Example input: [2,2], [3,1]
+  * Example output: true
+  * Example input: [2,2], [1,1]
+  * Example output: true
+  * Example input: [2,2], [3,3]
+  * Example output: true
+  * Example input: [2,2], [1,3]
+  * Example output: true
 
 ## Known Bugs
 
